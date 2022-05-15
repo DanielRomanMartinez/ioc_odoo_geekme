@@ -1,0 +1,303 @@
+<odoo>
+  <data>
+<!-- INICIO COPIA -->
+<!-- COMMENTS -->
+
+    <!-- List view -->
+    <record model="ir.ui.view" id="geekmeet.comment_list">
+      <field name="name">Comment list</field>
+      <field name="model">geekmeet.comment</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="datetime_publish"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- Form view -->
+    <record model="ir.ui.view" id="geekmeet.comment_form">
+      <field name="name">Comment form</field>
+      <field name="model">geekmeet.comment</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <field name="active" invisible="1"/>
+            <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+            <div class="oe_title">
+                <h1>
+                    <field name="name" placeholder="Subject" required="True"/>
+                </h1>
+            </div>
+            <group>
+              <group>
+                <field name="movie_id"/>
+              </group>
+              <group>
+                <field name="datetime_publish"/>
+                <field name="creator_id"/>
+              </group>
+            </group>
+            <group>
+              <field name="description"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="geekmeet.action_comment">
+      <field name="name">Comment window</field>
+      <field name="res_model">geekmeet.comment</field>
+      <field name="view_mode">form</field>
+    </record>
+      
+<!-- MOVIE -->
+
+    <!-- List view -->
+    <record model="ir.ui.view" id="geekmeet.movie_list">
+      <field name="name">Movie list</field>
+      <field name="model">geekmeet.movie</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="director_id"/>
+          <field name="producer_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Form view -->
+    <record model="ir.ui.view" id="geekmeet.movie_form">
+      <field name="name">Movie form</field>
+      <field name="model">geekmeet.movie</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="%(geekmeet.action_comment)d" string="Comment" type="action" context="{'movie_id': id}" />
+          </header>
+          <sheet>
+            <field name="active" invisible="1"/>
+            <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+            <field name="cover" widget='image' class="oe_avatar" options='{"zoom": true}'/>
+            <div class="oe_title">
+                <label for="name" string="Movie’s name" class="oe_edit_only"/>
+                <h1>
+                    <field name="name" placeholder="Movie's name" required="True"/>
+                </h1>
+            </div>
+            <group>
+              <group>
+                <field name="director_id"/>
+                <field name="producer_id"/>
+                <field name="date_publish"/>
+              </group>
+              <group>
+                <field name="creator_id"/>
+              </group>
+            </group>
+            <group>
+              <field name="description"/>
+            </group>
+            <group>
+              <field name="comment_ids" context = "{'movie_id': id}"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Search view -->
+    <record id="geekmeet.movie_search_view"  model="ir.ui.view">
+      <field name="model">geekmeet.movie</field>
+      <field name="arch" type="xml">
+        <search>
+            <field name="name"/>
+            <field name="director_id"/>
+            <group string="Group By">
+            <filter name="group_by_director" string="Director" context="{'group_by': 'director_id'}"/>
+            <filter name="group_by_producer" string="Producer" context="{'group_by': 'producer_id'}"/>
+            </group>
+        </search>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="geekmeet.movie_action_window">
+      <field name="name">Movie window</field>
+      <field name="res_model">geekmeet.movie</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+<!-- DIRECTOR -->
+
+    <!-- List view -->
+    <record model="ir.ui.view" id="geekmeet.director_list">
+      <field name="name">Director list</field>
+      <field name="model">geekmeet.director</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="last_name"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Form view -->
+    <record model="ir.ui.view" id="geekmeet.director_form">
+      <field name="name">Director form</field>
+      <field name="model">geekmeet.director</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <field name="image" widget='image' class="oe_avatar" options='{"zoom": true}'/>
+            <group>
+              <group>
+                <field name="name"/>
+                <field name="last_name"/>
+              </group>
+              <group>
+                <field name="birthdate"/>
+                <field name="is_dead"/>
+                <field name="deceasedate" attrs="{'invisible':[('is_dead','=',False)]}"/>
+                <field name="age" attrs="{'invisible':[('is_dead','=',True)]}"/>
+              </group>
+            </group>
+            <group>
+              <field name="movie_ids"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="geekmeet.director_action_window">
+      <field name="name">Director window</field>
+      <field name="res_model">geekmeet.director</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+<!-- PRODUCER -->
+
+    <!-- List view -->
+    <record model="ir.ui.view" id="geekmeet.producer_list">
+      <field name="name">Producer list</field>
+      <field name="model">geekmeet.producer</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Form view -->
+    <record model="ir.ui.view" id="geekmeet.producer_form">
+      <field name="name">Producer form</field>
+      <field name="model">geekmeet.producer</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <div class="oe_title">
+                <h1>
+                    <field name="name" placeholder="Producer's name" required="True"/>
+                </h1>
+            </div>
+            <group>
+              <field name="description"/>
+            </group>
+            <group>
+              <field name="movie_ids"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="geekmeet.producer_action_window">
+      <field name="name">Producer window</field>
+      <field name="res_model">geekmeet.producer</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Geekmeet" id="geekmeet.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Movies" id="geekmeet.menu_1" parent="geekmeet.menu_root" action="geekmeet.movie_action_window"/>
+    <menuitem name="Directors" id="geekmeet.menu_2" parent="geekmeet.menu_root" action="geekmeet.director_action_window"/>
+    <menuitem name="Producers" id="geekmeet.menu_3" parent="geekmeet.menu_root" action="geekmeet.producer_action_window"/>
+
+    <!-- actions -->
+
+    <!--<menuitem name="List" id="geekmeet.menu_1_list" parent="geekmeet.menu_1"
+              action="geekmeet.action_window"/>-->
+    <!-- FIN COPIA -->
+
+
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="geekmeet.list">
+      <field name="name">geekmeet list</field>
+      <field name="model">geekmeet.geekmeet</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="geekmeet.action_window">
+      <field name="name">geekmeet window</field>
+      <field name="res_model">geekmeet.geekmeet</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="geekmeet.action_server">
+      <field name="name">geekmeet server</field>
+      <field name="model_id" ref="model_geekmeet_geekmeet"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="geekmeet" id="geekmeet.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="geekmeet.menu_1" parent="geekmeet.menu_root"/>
+    <menuitem name="Menu 2" id="geekmeet.menu_2" parent="geekmeet.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="geekmeet.menu_1_list" parent="geekmeet.menu_1"
+              action="geekmeet.action_window"/>
+    <menuitem name="Server to list" id="geekmeet" parent="geekmeet.menu_2"
+              action="geekmeet.action_server"/>
+-->
+  </data>
+</odoo>

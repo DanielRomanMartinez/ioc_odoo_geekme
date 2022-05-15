@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_geekmeet_movie_manager,geekmeet.movie.manager,model_geekmeet_movie,group_geekmeet_manager,1,1,1,1
+access_geekmeet_movie_user,geekmeet.movie.user,model_geekmeet_movie,group_geekmeet_user,1,0,1,0
+access_geekmeet_director_manager,geekmeet.director.manager,model_geekmeet_director,group_geekmeet_manager,1,1,1,1
+access_geekmeet_director_user,geekmeet.director.user,model_geekmeet_director,group_geekmeet_user,1,0,0,0
+access_geekmeet_producer_manager,geekmeet.producer.manager,model_geekmeet_producer,group_geekmeet_manager,1,1,1,1
+access_geekmeet_producer_user,geekmeet.producer.user,model_geekmeet_producer,group_geekmeet_user,1,0,0,0
+access_geekmeet_comment_manager,geekmeet.comment.manager,model_geekmeet_comment,group_geekmeet_manager,1,1,1,1
+access_geekmeet_comment_user,geekmeet.comment.user,model_geekmeet_comment,group_geekmeet_user,1,0,1,0
