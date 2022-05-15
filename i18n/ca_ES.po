@@ -1,0 +1,306 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* geekmeet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-15 15:28+0000\n"
+"PO-Revision-Date: 2022-05-15 17:44+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__active
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__active
+msgid "Active"
+msgstr "Actiu"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__age
+msgid "Age"
+msgstr "Edat"
+
+#. module: geekmeet
+#: model_terms:ir.ui.view,arch_db:geekmeet.comment_form
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_form
+msgid "Archived"
+msgstr "Arxivat"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__birthdate
+msgid "Birthdate"
+msgstr "Data de naixement"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_res_users__comment_ids
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_form
+msgid "Comment"
+msgstr "Comenta"
+
+#. module: geekmeet
+#: model:ir.actions.act_window,name:geekmeet.action_comment
+msgid "Comment window"
+msgstr "Finestra de comentaris"
+
+#. module: geekmeet
+#: model:ir.model,name:geekmeet.model_geekmeet_comment
+msgid "Comment's database"
+msgstr "Base de dades de comentaris"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__comment_ids
+msgid "Comments"
+msgstr "Comentaris"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__cover
+msgid "Cover"
+msgstr "Portada"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__create_uid
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__creator_id
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__create_uid
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__create_uid
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__creator_id
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__create_date
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__create_date
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__create_date
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__deceasedate
+msgid "Decease date"
+msgstr "Data de defunció"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__description
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__description
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__description
+msgid "Description"
+msgstr "Descripció"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__director_id
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_search_view
+msgid "Director"
+msgstr "Director"
+
+#. module: geekmeet
+#: model:ir.actions.act_window,name:geekmeet.director_action_window
+msgid "Director window"
+msgstr "Finestra de director"
+
+#. module: geekmeet
+#: model:ir.model,name:geekmeet.model_geekmeet_director
+msgid "Director's database"
+msgstr "Base de dades de directors"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__last_name
+msgid "Director's last name"
+msgstr "Cognom del director"
+
+#. module: geekmeet
+#: model:ir.ui.menu,name:geekmeet.menu_2
+msgid "Directors"
+msgstr "Directors"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__name
+msgid "Directors's name"
+msgstr "Nom del director"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__display_name
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__display_name
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__display_name
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__display_name
+msgid "Display Name"
+msgstr "Nom de visualització"
+
+#. module: geekmeet
+#: model:ir.module.category,name:geekmeet.module_category_geekmeet
+#: model:ir.ui.menu,name:geekmeet.menu_root
+msgid "Geekmeet"
+msgstr "Geekmeet"
+
+#. module: geekmeet
+#: model:res.groups,name:geekmeet.group_geekmeet_manager
+msgid "Geekmeet Manager"
+msgstr "Geekmeet Manager"
+
+#. module: geekmeet
+#: model:res.groups,name:geekmeet.group_geekmeet_user
+msgid "Geekmeet User"
+msgstr "Geekmeet User"
+
+#. module: geekmeet
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_search_view
+msgid "Group By"
+msgstr "Agrupar per"
+
+#. module: geekmeet
+#: model:ir.module.category,description:geekmeet.module_category_geekmeet
+msgid "Helps you manage your movies"
+msgstr "T'ajuda a gestionar les teves pel·lícules"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__id
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__id
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__id
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__id
+msgid "ID"
+msgstr "ID"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__image
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__image_1920
+msgid "Image"
+msgstr "Imatge"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__image_1024
+msgid "Image 1024"
+msgstr "Imatge 1024"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__image_128
+msgid "Image 128"
+msgstr "Imatge 128"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__image_256
+msgid "Image 256"
+msgstr "Image 256"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__image_512
+msgid "Image 512"
+msgstr "Image 512"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__is_dead
+msgid "Is dead?"
+msgstr "Es mort?"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment____last_update
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director____last_update
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie____last_update
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer____last_update
+msgid "Last Modified on"
+msgstr "Última modificació el"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__write_uid
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__write_uid
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__write_uid
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__write_date
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__write_date
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__write_date
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__write_date
+msgid "Last Updated on"
+msgstr "Última actualització el"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__movie_id
+msgid "Movie"
+msgstr "Pel·lícula"
+
+#. module: geekmeet
+#: model_terms:ir.ui.view,arch_db:geekmeet.view_users_user
+msgid "Movie comments"
+msgstr "Comentaris de la pel·lícula"
+
+#. module: geekmeet
+#: model:ir.actions.act_window,name:geekmeet.movie_action_window
+msgid "Movie window"
+msgstr "Finestra de pel·lícules"
+
+#. module: geekmeet
+#: model:ir.model,name:geekmeet.model_geekmeet_movie
+msgid "Movie's database"
+msgstr "Base de dades de pel·lícules"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__name
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_form
+msgid "Movie's name"
+msgstr "Nom de la pel·lícula"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_director__movie_ids
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__movie_ids
+#: model:ir.ui.menu,name:geekmeet.menu_1
+msgid "Movies"
+msgstr "Pel·lícules"
+
+#. module: geekmeet
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_form
+msgid "Movie’s name"
+msgstr "Nom de la pel·lícula"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__producer_id
+#: model_terms:ir.ui.view,arch_db:geekmeet.movie_search_view
+msgid "Producer"
+msgstr "Productor"
+
+#. module: geekmeet
+#: model:ir.actions.act_window,name:geekmeet.producer_action_window
+msgid "Producer window"
+msgstr "Finestra de productors"
+
+#. module: geekmeet
+#: model:ir.model,name:geekmeet.model_geekmeet_producer
+msgid "Producer's database"
+msgstr "Base de dades de productors"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_producer__name
+#: model_terms:ir.ui.view,arch_db:geekmeet.producer_form
+msgid "Producer's name"
+msgstr "Nom del productor"
+
+#. module: geekmeet
+#: model:ir.ui.menu,name:geekmeet.menu_3
+msgid "Producers"
+msgstr "Productors"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__datetime_publish
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_movie__date_publish
+msgid "Publish date"
+msgstr "Data de publicació"
+
+#. module: geekmeet
+#: model:ir.model.fields,field_description:geekmeet.field_geekmeet_comment__name
+#: model_terms:ir.ui.view,arch_db:geekmeet.comment_form
+msgid "Subject"
+msgstr "Assumpte"
+
+#. module: geekmeet
+#: model:ir.model,name:geekmeet.model_res_users
+msgid "Users"
+msgstr "Usuaris"
