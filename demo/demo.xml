@@ -33,7 +33,7 @@
         <record id="geekmeet.comment1" model="geekmeet.comment">
             <field name="name">Lorem ipsum dolor sit amet</field>
             <field name="datetime_publish" eval="DateTime.now()"/>
-            <field name="creator_id" ref="base.user_root"/>
+            <field name="creator_id" ref="base.user_demo"/>
             <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
             <field name="active">True</field>
         </record>
@@ -41,7 +41,7 @@
         <record id="geekmeet.comment2" model="geekmeet.comment">
             <field name="name">Lorem ipsum dolor sit amet</field>
             <field name="datetime_publish" eval="DateTime.now()"/>
-            <field name="creator_id" ref="base.user_root"/>
+            <field name="creator_id" ref="base.user_demo"/>
             <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
             <field name="active">True</field>
         </record>
@@ -76,10 +76,10 @@
             <field name="date_publish">2002-06-17</field>
             <field name="cover" type="base64" file="geekmeet/static/src/img/movies/Minority-Report.jpg"/>
             <field name="description">Minority Report és una pel·lícula estatunidenca de 2002 de ciència-ficció, que tracta sobre els problemes que podrien sorgir en el cas que la policia poguera saber quins crims es cometran abans que succeïsquen. Està basada en un relat curt de Philip K. Dick, The Minority Report (1956).</field>
-            <field name="active">False</field>
+            <field name="active">True</field>
             <field name="director_id" ref="geekmeet.director1"/>
             <field name="producer_id" ref="geekmeet.producer1"/>
-            <field name="creator_id" ref="base.user_root"/>
+            <field name="creator_id" ref="base.user_demo"/>
             <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment1')])]" />
         </record>
 
@@ -88,10 +88,10 @@
             <field name="date_publish">2004-09-10</field>
             <field name="cover" type="base64" file="geekmeet/static/src/img/movies/The-Terminal.jpg"/>
             <field name="description">The terminal és una pel·lícula estatunidenca, dramàtica, romàntica i còmica dirigida per Steven Spielberg, estrenada el 2004 i protagonitzada per Tom Hanks, Catherine Zeta-Jones, Chi McBride, Stanley Tucci i Diego Luna.</field>
-            <field name="active">False</field>
+            <field name="active">True</field>
             <field name="director_id" ref="geekmeet.director1"/>
             <field name="producer_id" ref="geekmeet.producer1"/>
-            <field name="creator_id" ref="base.user_root"/>
+            <field name="creator_id" ref="base.user_demo"/>
             <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment2')])]" />
         </record>
 
@@ -100,7 +100,7 @@
             <field name="date_publish">2005-11-25</field>
             <field name="cover" type="base64" file="geekmeet/static/src/img/movies/Harry-Potter-i-el-calze-de-foc.jpg"/>
             <field name="description">Harry Potter i el calze de foc és la quarta pel·lícula de la sèrie Harry Potter, basada en la novel·la homònima escrita per J. K. Rowling. Fou dirigida per Mike Newell i estrenada el 18 de novembre de 2005. Va ser classificada com a no recomanada per a menors de 13 anys pel fet de contenir diverses escenes de terror i violència. </field>
-            <field name="active">False</field>
+            <field name="active">True</field>
             <field name="director_id" ref="geekmeet.director2"/>
             <field name="producer_id" ref="geekmeet.producer2"/>
             <field name="creator_id" ref="base.user_admin"/>
@@ -112,7 +112,7 @@
             <field name="date_publish">2003-12-19</field>
             <field name="cover" type="base64" file="geekmeet/static/src/img/movies/El-somriure-de-la-Mona-Lisa.jpg"/>
             <field name="description">El somriure de la Mona Lisa és una pel·lícula estatunidenca, dirigida per Mike Newell amb Julia Roberts de protagonista i estrenada el 2003. Ha estat doblada al català.</field>
-            <field name="active">False</field>
+            <field name="active">True</field>
             <field name="director_id" ref="geekmeet.director2"/>
             <field name="producer_id" ref="geekmeet.producer2"/>
             <field name="creator_id" ref="base.user_admin"/>
