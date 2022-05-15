@@ -1,30 +1,67 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="geekmeet.geekmeet">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
 
-          <record id="object1" model="geekmeet.geekmeet">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <!-- comments -->
 
-          <record id="object2" model="geekmeet.geekmeet">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+        <!-- movies -->
+        <record id="geekmeet.movie1" model="geekmeet.movie">
+            <field name="name">Minority Report</field>
+            <field name="date_publish">2002-06-17</field>
+            <field name="image" type="base64" file="geekmeet/demo/assets/img/movies/Minority-Report.jpg"/>
+            <field name="description">Minority Report és una pel·lícula estatunidenca de 2002 de ciència-ficció, que tracta sobre els problemes que podrien sorgir en el cas que la policia poguera saber quins crims es cometran abans que succeïsquen. Està basada en un relat curt de Philip K. Dick, The Minority Report (1956).</field>
+            <field name="active">False</field>
+            <field name="director_id" ref="geekmeet.director1"/>
+            <field name="director_id" ref="geekmeet.producer1"/>
+            <field name="creator_id" ref="base.user_root"/>
+            <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment1')])]" />
+        </record>
 
-          <record id="object3" model="geekmeet.geekmeet">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
+        <record id="geekmeet.movie2" model="geekmeet.movie">
+            <field name="name">The Terminal</field>
+            <field name="date_publish">2004-09-10</field>
+            <field name="image" type="base64" file="geekmeet/demo/assets/img/movies/The-Terminal.jpg"/>
+            <field name="description">The terminal és una pel·lícula estatunidenca, dramàtica, romàntica i còmica dirigida per Steven Spielberg, estrenada el 2004 i protagonitzada per Tom Hanks, Catherine Zeta-Jones, Chi McBride, Stanley Tucci i Diego Luna.</field>
+            <field name="active">False</field>
+            <field name="director_id" ref="geekmeet.director1"/>
+            <field name="director_id" ref="geekmeet.producer1"/>
+            <field name="creator_id" ref="base.user_root"/>
+            <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment2')])]" />
+        </record>
 
-          <record id="object4" model="geekmeet.geekmeet">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <record id="geekmeet.movie1" model="geekmeet.movie">
+            <field name="name">Minority Report</field>
+            <field name="date_publish">2002-06-17</field>
+            <field name="image" type="base64" file="geekmeet/demo/assets/img/movies/Minority-Report.jpg"/>
+            <field name="description">Minority Report és una pel·lícula estatunidenca de 2002 de ciència-ficció, que tracta sobre els problemes que podrien sorgir en el cas que la policia poguera saber quins crims es cometran abans que succeïsquen. Està basada en un relat curt de Philip K. Dick, The Minority Report (1956),</field>
+            <field name="active">False</field>
+            <field name="director_id" ref="geekmeet.director1"/>
+            <field name="director_id" ref="geekmeet.producer1"/>
+            <field name="creator_id" ref="base.user_root"/>
+            <field name="comment_ids" eval="[(6, 0, [ref('base.res_partner_address_14'), ref('base.res_partner_address_15')])]" />
+        </record>
+
+        <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+
+
+        <!-- directors -->
+        <record id="geekmeet.director1" model="geekmeet.director">
+            <field name="name">Mike</field>
+            <field name="last_name">Newell</field>
+            <field name="image" type="base64" file="geekmeet/demo/assets/img/directors/mike-newell.jpg"/>
+            <field name="birthdate">1942-03-28</field>
+            <field name="is_dead">False</field>
+        </record>
+
+        <record id="geekmeet.director2" model="geekmeet.director">
+            <field name="name">Steven</field>
+            <field name="last_name">Spielberg</field>
+            <field name="image" type="base64" file="geekmeet/demo/assets/img/directors/steven-spielberg.jpg"/>
+            <field name="birthdate">1946-12-18</field>
+            <field name="is_dead">False</field>
+        </record>
+
     </data>
 </odoo>
