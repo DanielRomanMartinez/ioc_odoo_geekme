@@ -73,6 +73,7 @@ class Producer(models.Model):
 
 class Comment(models.Model):
     _name = 'geekmeet.comment'
+    _description = 'Comment\'s database'
     _order = 'datetime_publish'
 
     @api.model
