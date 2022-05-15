@@ -1,17 +1,84 @@
 <odoo>
     <data>
 
+        <!-- producers -->
+        <record id="geekmeet.producer1" model="geekmeet.producer">
+            <field name="name">Universal Pictures</field>
+            <field name="description">Els Universal Studios són una companyia dedicada a la producció i la distribució de pel·lícules de cinema, controlada per General Electric. Els estudis i les oficines corporatives estan al número 100 del carrer Universal City Plaza Drive al districte de Universal City, a Los Angeles als Estats Units. És propietat de Comcast Corporation a través de la seva pròpia dependència NBCUniversal.</field>
+        </record>
+
+        <record id="geekmeet.producer2" model="geekmeet.producer">
+            <field name="name">Warner Bros. Entertainment, Inc</field>
+            <field name="description">Warner Bros. Entertainment, Inc és un dels més grans productors de cinema i televisió del món. És actualment una filial del conglomerat Time Warner amb seu a Burbank, Califòrnia, Estats Units. </field>
+        </record>
+
+        <!-- directors -->
+        <record id="geekmeet.director2" model="geekmeet.director">
+            <field name="name">Steven</field>
+            <field name="last_name">Spielberg</field>
+            <field name="image" type="base64" file="geekmeet/static/src/img/directors/steven-spielberg.jpeg"/>
+            <field name="birthdate">1946-12-18</field>
+            <field name="is_dead">False</field>
+        </record>
+
+        <record id="geekmeet.director1" model="geekmeet.director">
+            <field name="name">Mike</field>
+            <field name="last_name">Newell</field>
+            <field name="image" type="base64" file="geekmeet/static/src/img/directors/mike-newell.jpg"/>
+            <field name="birthdate">1942-03-28</field>
+            <field name="is_dead">False</field>
+        </record>
+
         <!-- comments -->
+        <record id="geekmeet.comment1" model="geekmeet.comment">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="datetime_publish" eval="DateTime.now()"/>
+            <field name="creator_id" ref="base.user_root"/>
+            <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="geekmeet.comment2" model="geekmeet.comment">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="datetime_publish" eval="DateTime.now()"/>
+            <field name="creator_id" ref="base.user_root"/>
+            <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="geekmeet.comment3" model="geekmeet.comment">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="datetime_publish" eval="DateTime.now()"/>
+            <field name="creator_id" ref="base.user_admin"/>
+            <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="geekmeet.comment4" model="geekmeet.comment">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="datetime_publish" eval="DateTime.now()"/>
+            <field name="creator_id" ref="base.user_admin"/>
+            <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="geekmeet.comment5" model="geekmeet.comment">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="datetime_publish" eval="DateTime.now()"/>
+            <field name="creator_id" ref="base.user_admin"/>
+            <field name="description">Etiam vitae nibh orci. Curabitur nec libero erat. Sed in aliquet nunc. Ut eget libero mollis, consectetur nulla blandit, lacinia tellus. Integer maximus est gravida lectus luctus porta.</field>
+            <field name="active">True</field>
+        </record>
 
         <!-- movies -->
         <record id="geekmeet.movie1" model="geekmeet.movie">
             <field name="name">Minority Report</field>
             <field name="date_publish">2002-06-17</field>
-            <field name="image" type="base64" file="geekmeet/demo/assets/img/movies/Minority-Report.jpg"/>
+            <field name="cover" type="base64" file="geekmeet/static/src/img/movies/Minority-Report.jpg"/>
             <field name="description">Minority Report és una pel·lícula estatunidenca de 2002 de ciència-ficció, que tracta sobre els problemes que podrien sorgir en el cas que la policia poguera saber quins crims es cometran abans que succeïsquen. Està basada en un relat curt de Philip K. Dick, The Minority Report (1956).</field>
             <field name="active">False</field>
             <field name="director_id" ref="geekmeet.director1"/>
-            <field name="director_id" ref="geekmeet.producer1"/>
+            <field name="producer_id" ref="geekmeet.producer1"/>
             <field name="creator_id" ref="base.user_root"/>
             <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment1')])]" />
         </record>
@@ -19,49 +86,37 @@
         <record id="geekmeet.movie2" model="geekmeet.movie">
             <field name="name">The Terminal</field>
             <field name="date_publish">2004-09-10</field>
-            <field name="image" type="base64" file="geekmeet/demo/assets/img/movies/The-Terminal.jpg"/>
+            <field name="cover" type="base64" file="geekmeet/static/src/img/movies/The-Terminal.jpg"/>
             <field name="description">The terminal és una pel·lícula estatunidenca, dramàtica, romàntica i còmica dirigida per Steven Spielberg, estrenada el 2004 i protagonitzada per Tom Hanks, Catherine Zeta-Jones, Chi McBride, Stanley Tucci i Diego Luna.</field>
             <field name="active">False</field>
             <field name="director_id" ref="geekmeet.director1"/>
-            <field name="director_id" ref="geekmeet.producer1"/>
+            <field name="producer_id" ref="geekmeet.producer1"/>
             <field name="creator_id" ref="base.user_root"/>
             <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment2')])]" />
         </record>
 
-        <record id="geekmeet.movie1" model="geekmeet.movie">
-            <field name="name">Minority Report</field>
-            <field name="date_publish">2002-06-17</field>
-            <field name="image" type="base64" file="geekmeet/demo/assets/img/movies/Minority-Report.jpg"/>
-            <field name="description">Minority Report és una pel·lícula estatunidenca de 2002 de ciència-ficció, que tracta sobre els problemes que podrien sorgir en el cas que la policia poguera saber quins crims es cometran abans que succeïsquen. Està basada en un relat curt de Philip K. Dick, The Minority Report (1956),</field>
+        <record id="geekmeet.movie3" model="geekmeet.movie">
+            <field name="name">Harry Potter i el calze de foc</field>
+            <field name="date_publish">2005-11-25</field>
+            <field name="cover" type="base64" file="geekmeet/static/src/img/movies/Harry-Potter-i-el-calze-de-foc.jpg"/>
+            <field name="description">Harry Potter i el calze de foc és la quarta pel·lícula de la sèrie Harry Potter, basada en la novel·la homònima escrita per J. K. Rowling. Fou dirigida per Mike Newell i estrenada el 18 de novembre de 2005. Va ser classificada com a no recomanada per a menors de 13 anys pel fet de contenir diverses escenes de terror i violència. </field>
             <field name="active">False</field>
-            <field name="director_id" ref="geekmeet.director1"/>
-            <field name="director_id" ref="geekmeet.producer1"/>
-            <field name="creator_id" ref="base.user_root"/>
-            <field name="comment_ids" eval="[(6, 0, [ref('base.res_partner_address_14'), ref('base.res_partner_address_15')])]" />
+            <field name="director_id" ref="geekmeet.director2"/>
+            <field name="producer_id" ref="geekmeet.producer2"/>
+            <field name="creator_id" ref="base.user_admin"/>
+            <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment3'), ref('geekmeet.comment3')])]" />
         </record>
 
-        <field
-            name="users"
-            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
-        />
-
-
-        <!-- directors -->
-        <record id="geekmeet.director1" model="geekmeet.director">
-            <field name="name">Mike</field>
-            <field name="last_name">Newell</field>
-            <field name="image" type="base64" file="geekmeet/demo/assets/img/directors/mike-newell.jpg"/>
-            <field name="birthdate">1942-03-28</field>
-            <field name="is_dead">False</field>
+        <record id="geekmeet.movie4" model="geekmeet.movie">
+            <field name="name">El somriure de la Mona Lisa</field>
+            <field name="date_publish">2003-12-19</field>
+            <field name="cover" type="base64" file="geekmeet/static/src/img/movies/El-somriure-de-la-Mona-Lisa.jpg"/>
+            <field name="description">El somriure de la Mona Lisa és una pel·lícula estatunidenca, dirigida per Mike Newell amb Julia Roberts de protagonista i estrenada el 2003. Ha estat doblada al català.</field>
+            <field name="active">False</field>
+            <field name="director_id" ref="geekmeet.director2"/>
+            <field name="producer_id" ref="geekmeet.producer2"/>
+            <field name="creator_id" ref="base.user_admin"/>
+            <field name="comment_ids" eval="[(6, 0, [ref('geekmeet.comment5')])]" />
         </record>
-
-        <record id="geekmeet.director2" model="geekmeet.director">
-            <field name="name">Steven</field>
-            <field name="last_name">Spielberg</field>
-            <field name="image" type="base64" file="geekmeet/demo/assets/img/directors/steven-spielberg.jpg"/>
-            <field name="birthdate">1946-12-18</field>
-            <field name="is_dead">False</field>
-        </record>
-
     </data>
 </odoo>
