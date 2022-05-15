@@ -28,6 +28,7 @@
         'views/res_users_views.xml',
         'views/views.xml',
         'views/templates.xml',
+        'reports/movie_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
